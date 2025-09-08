@@ -1,4 +1,5 @@
 require("core.plugins")
 require("core.mappings")
 require("core.options")
+require("core.colors")
 require("core.lsp")
