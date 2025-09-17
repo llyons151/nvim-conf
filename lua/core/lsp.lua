@@ -1,16 +1,13 @@
--- Mason setup
 require("mason").setup()
 
--- Mason-LSPConfig setup
 require("mason-lspconfig").setup {
-  ensure_installed = { "lua_ls", "clangd", "pyright" }, -- add more if you need
+  ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls" }, -- use ts_ls now
   automatic_installation = true,
 }
 
--- Import lspconfig
 local lspconfig = require("lspconfig")
 
--- Lua (Neovim config dev)
+-- Lua
 lspconfig.lua_ls.setup {
   settings = {
     Lua = {
@@ -25,3 +22,6 @@ lspconfig.clangd.setup {}
 
 -- Python
 lspconfig.pyright.setup {}
+
+-- JavaScript / TypeScript
+lspconfig.ts_ls.setup {}

@@ -14,16 +14,28 @@ return require("packer").startup(function(use)
         requires = { "neovim/nvim-lspconfig" },
     }
 
-    use({
-        "projekt0n/github-nvim-theme",
-    })
 
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-
+    use {
+        "rose-pine/neovim",
+        as = "rose-pine",
+        config = function()
+            require("rose-pine").setup({
+                variant = "main",
+                dark_variant = "main",
+                highlight_groups = {
+                    ["@keyword.lua"]     = { fg = "iris", italic = true },
+                    ["@conditional.lua"] = { fg = "iris", italic = true },
+                    ["@repeat.lua"]      = { fg = "iris", italic = true },
+                },
+            })
+            vim.cmd("colorscheme rose-pine")
+        end,
+    }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
 end)
