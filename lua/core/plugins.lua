@@ -21,6 +21,16 @@ return require("packer").startup(function(use)
     }
 
     use {
+        "goolord/alpha-nvim",
+        requires = { "nvim-tree/nvim-web-devicons" },
+        config = function()
+            local alpha = require("alpha")
+            local theme = require("alpha.themes.startify") -- or .dashboard
+            alpha.setup(theme.config)
+        end,
+    }
+
+    use {
         "rose-pine/neovim",
         as = "rose-pine",
         config = function()
@@ -36,6 +46,7 @@ return require("packer").startup(function(use)
             vim.cmd("colorscheme rose-pine")
         end,
     }
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         -- or                            , branch = '0.1.x',

@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["alpha-nvim"] = {
+    config = { "\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0009\4\4\1B\2\2\1K\0\1\0\vconfig\nsetup\26alpha.themes.startify\nalpha\frequire\0" },
+    loaded = true,
+    path = "/home/mokey/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    url = "https://github.com/goolord/alpha-nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/mokey/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -99,6 +105,11 @@ _G.packer_plugins = {
     path = "/home/mokey/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/mokey/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/mokey/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -110,7 +121,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
-    config = { "\27LJ\2\ná\2\0\0\5\0\15\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\3=\3\v\2B\0\2\0016\0\f\0009\0\r\0'\2\14\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\21highlight_groups\16@repeat.lua\1\0\2\afg\tiris\vitalic\2\21@conditional.lua\1\0\2\afg\tiris\vitalic\2\17@keyword.lua\1\0\3\16@repeat.lua\0\17@keyword.lua\0\21@conditional.lua\0\1\0\2\afg\tiris\vitalic\2\1\0\3\17dark_variant\tmain\21highlight_groups\0\fvariant\tmain\nsetup\14rose-pine\frequire\0" },
+    config = { "\27LJ\2\ná\2\0\0\5\0\15\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\3=\3\v\2B\0\2\0016\0\f\0009\0\r\0'\2\14\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\21highlight_groups\16@repeat.lua\1\0\2\afg\tiris\vitalic\2\21@conditional.lua\1\0\2\afg\tiris\vitalic\2\17@keyword.lua\1\0\3\16@repeat.lua\0\17@keyword.lua\0\21@conditional.lua\0\1\0\2\afg\tiris\vitalic\2\1\0\3\fvariant\tmain\21highlight_groups\0\17dark_variant\tmain\nsetup\14rose-pine\frequire\0" },
     loaded = true,
     path = "/home/mokey/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
@@ -125,8 +136,12 @@ _G.packer_plugins = {
 time([[Defining packer_plugins]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\ná\2\0\0\5\0\15\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\3=\3\v\2B\0\2\0016\0\f\0009\0\r\0'\2\14\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\21highlight_groups\16@repeat.lua\1\0\2\afg\tiris\vitalic\2\21@conditional.lua\1\0\2\afg\tiris\vitalic\2\17@keyword.lua\1\0\3\16@repeat.lua\0\17@keyword.lua\0\21@conditional.lua\0\1\0\2\afg\tiris\vitalic\2\1\0\3\17dark_variant\tmain\21highlight_groups\0\fvariant\tmain\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
+try_loadstring("\27LJ\2\ná\2\0\0\5\0\15\0\0196\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\5\0005\4\4\0=\4\6\0035\4\a\0=\4\b\0035\4\t\0=\4\n\3=\3\v\2B\0\2\0016\0\f\0009\0\r\0'\2\14\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\21highlight_groups\16@repeat.lua\1\0\2\afg\tiris\vitalic\2\21@conditional.lua\1\0\2\afg\tiris\vitalic\2\17@keyword.lua\1\0\3\16@repeat.lua\0\17@keyword.lua\0\21@conditional.lua\0\1\0\2\afg\tiris\vitalic\2\1\0\3\fvariant\tmain\21highlight_groups\0\17dark_variant\tmain\nsetup\14rose-pine\frequire\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n`\0\0\5\0\5\0\n6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0009\4\4\1B\2\2\1K\0\1\0\vconfig\nsetup\26alpha.themes.startify\nalpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
