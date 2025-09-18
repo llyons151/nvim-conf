@@ -14,6 +14,11 @@ return require("packer").startup(function(use)
         requires = { "neovim/nvim-lspconfig" },
     }
 
+    use {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        requires = { "nvim-lua/plenary.nvim" }
+    }
 
     use {
         "rose-pine/neovim",
@@ -38,4 +43,5 @@ return require("packer").startup(function(use)
     }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+
 end)

@@ -15,7 +15,7 @@ rose_pine.setup({
 
   highlight_groups = {
     -- Tree-sitter captures
-    ["@keyword"]            = { fg = "#000000",  italic = true }, -- local, if, end
+    ["@keyword"]            = { fg = "#FFFFFF",  italic = true }, -- local, if, end
     ["@keyword.function"]   = { fg = "iris",  italic = true },
     ["@conditional"]        = { fg = "iris",  italic = true },
     ["@repeat"]             = { fg = "iris",  italic = true },
