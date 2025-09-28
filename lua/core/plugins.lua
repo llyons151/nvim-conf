@@ -30,6 +30,19 @@ return require("packer").startup(function(use)
         end,
     }
 
+    -- Or with configuration
+    use({
+      'projekt0n/github-nvim-theme',
+      config = function()
+        require('github-theme').setup({
+          -- ...
+        })
+
+        vim.cmd('colorscheme github_dark_tritanopia')
+      end
+    })
+
+--[[
     use {
         "rose-pine/neovim",
         as = "rose-pine",
@@ -46,6 +59,7 @@ return require("packer").startup(function(use)
             vim.cmd("colorscheme rose-pine")
         end,
     }
+--]]
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
