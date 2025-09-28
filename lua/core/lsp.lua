@@ -1,7 +1,7 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup {
-  ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls" }, -- use ts_ls now
+  ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls", "stylua" }, -- use ts_ls now
   automatic_installation = true,
 }
 

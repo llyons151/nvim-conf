@@ -30,17 +30,12 @@ return require("packer").startup(function(use)
         end,
     }
 
-    -- Or with configuration
-    use({
-      'projekt0n/github-nvim-theme',
-      config = function()
-        require('github-theme').setup({
-          -- ...
-        })
-
-        vim.cmd('colorscheme github_dark_tritanopia')
-      end
-    })
+    use {
+        "cocopon/iceberg.vim",
+        config = function()
+            vim.cmd("colorscheme iceberg")
+        end
+    }
 
 --[[
     use {

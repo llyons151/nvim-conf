@@ -4,3 +4,17 @@ require("core.mappings")
 require("core.options")
 require("core.colors")
 require("core.lsp")
+require("core.diagnostics")
+
+local function kill_line_nr_bg()
+  for _, g in ipairs({ "CursorLineNr", "LineNr", "SignColumn" }) do
+    vim.api.nvim_set_hl(0, g, { bg = "NONE", ctermbg = "NONE" })
+  end
+end
+
+kill_line_nr_bg()
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  group = vim.api.nvim_create_augroup("NoLineNrBG", { clear = true }),
+  callback = kill_line_nr_bg,
+})
