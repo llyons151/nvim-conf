@@ -8,6 +8,10 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+--window behavior
+vim.keymap.set('n', '<leader>ws', '<CMD>vsplit<CR>');
+vim.keymap.set('n', '<leader>wc', '<CMD>close<CR>');
+
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
