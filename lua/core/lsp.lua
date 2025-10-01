@@ -5,6 +5,10 @@ require("mason-lspconfig").setup {
   automatic_installation = true,
 }
 
+require("lspconfig").clangd.setup {
+  cmd = { "clangd", "--query-driver=/usr/bin/g++,/usr/bin/clang++" },
+}
+
 local lspconfig = require("lspconfig")
 
 -- Lua
