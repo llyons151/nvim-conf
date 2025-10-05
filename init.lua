@@ -18,3 +18,18 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   group = vim.api.nvim_create_augroup("NoLineNrBG", { clear = true }),
   callback = kill_line_nr_bg,
 })
+
+-- enable true color
+vim.o.termguicolors = true
+
+-- make main backgrounds transparent
+vim.api.nvim_set_hl(0, "Normal",     { bg = "NONE" })
+vim.api.nvim_set_hl(0, "NormalFloat",{ bg = "NONE" })
+
+-- keep transparency after changing colorschemes
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    vim.api.nvim_set_hl(0, "Normal",      { bg = "NONE" })
+    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "NONE" })
+  end,
+})

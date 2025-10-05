@@ -1,18 +1,14 @@
+-- Mason core
 require("mason").setup()
 
-require("mason-lspconfig").setup {
-  ensure_installed = { "lua_ls", "clangd", "pyright", "ts_ls", "stylua" }, -- use ts_ls now
+-- mason-lspconfig: ONLY servers Mason can install
+require("mason-lspconfig").setup({
+  ensure_installed = { "lua_ls", "pyright", "ts_ls" },  -- removed "ccls"
   automatic_installation = true,
-}
-
-require("lspconfig").clangd.setup {
-  cmd = { "clangd", "--query-driver=/usr/bin/g++,/usr/bin/clang++" },
-}
-
-local lspconfig = require("lspconfig")
+})
 
 -- Lua
-lspconfig.lua_ls.setup {
+vim.lsp.config["lua_ls"] = {
   settings = {
     Lua = {
       diagnostics = { globals = { "vim" } },
@@ -21,11 +17,21 @@ lspconfig.lua_ls.setup {
   },
 }
 
--- C/C++
-lspconfig.clangd.setup {}
+-- C/C++ via ccls (installed with pacman)
+vim.lsp.config["ccls"] = {
+  init_options = {
+    compilationDatabaseDirectory = "build",
+    index = { threads = 0 },
+    clang = { excludeArgs = { "-frounding-math" } },
+  },
+}
 
 -- Python
-lspconfig.pyright.setup {}
+vim.lsp.config["pyright"] = {}
 
--- JavaScript / TypeScript
-lspconfig.ts_ls.setup {}
+-- JavaScript / TypeScript (Neovim 0.11 name)
+vim.lsp.config["ts_ls"] = {}
+
+-- Enable them (start on new buffers)
+vim.lsp.enable({ "lua_ls", "ccls", "pyright", "ts_ls" })
+
