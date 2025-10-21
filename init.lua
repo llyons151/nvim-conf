@@ -3,7 +3,6 @@ require("core.harpoon")
 require("core.mappings")
 require("core.options")
 require("core.colors")
-require("core.lsp")
 require("core.diagnostics")
 
 local function kill_line_nr_bg()

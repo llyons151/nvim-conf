@@ -8,6 +8,13 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
+--typst mapping
+vim.keymap.set("n", "<leader>tp", ":TypstPreview<CR>", { desc = "Start Typst preview" })
+vim.keymap.set("n", "<leader>ts", ":TypstPreviewStop<CR>", { desc = "Stop Typst preview" })
+vim.keymap.set("n", "<leader>tt", ":TypstPreviewToggle<CR>", { desc = "Toggle Typst preview" })
+vim.keymap.set("n", "<leader>tf", ":TypstPreviewFollowCursorToggle<CR>", { desc = "Toggle follow cursor" })
+vim.keymap.set("n", "<leader>tc", ":TypstPreviewSyncCursor<CR>", { desc = "Sync preview to cursor" })
+
 --window behavior
 vim.keymap.set('n', '<leader>ws', '<CMD>vsplit<CR>');
 vim.keymap.set('n', '<leader>wc', '<CMD>close<CR>');
@@ -18,6 +25,8 @@ vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
+vim.opt.backupcopy = "yes"   
+vim.opt.writebackup = false 
 
 vim.opt.wrap = false
 
